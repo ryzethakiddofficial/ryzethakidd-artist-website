@@ -1,0 +1,120 @@
+@import url('homestyle.css'); /* Import homestyle.css to inherit global styles */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    margin: 0;
+    padding-top: 80px; /* Space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar container */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Form Styles */
+.contact-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 500px;
+    max-width: 100%;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: auto; /* Allow space for the footer */
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #512da8;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    background-color: #eee;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.contact-container button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #5c6bc0;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Make footer span full width */
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons .icon {
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer .social-icons .icon:hover {
+    color: #e2e2e2;
+}
+
+/* Ensure header stays fixed at the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
