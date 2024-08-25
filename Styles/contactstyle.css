@@ -26,6 +26,41 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px; /* Added padding for better touch targets on mobile */
+}
+
+/* Navigation Bar Links */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #512da8;
 }
 
 /* Contact Form Styles */
@@ -34,17 +69,22 @@ body {
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     width: 500px;
-    max-width: 100%;
+    max-width: 90%; /* Ensures form does not exceed viewport width */
     padding: 30px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: auto; /* Allow space for the footer */
+    margin-bottom: 40px; /* Allow space for the footer */
 }
 
 .contact-container h2 {
     margin-bottom: 20px;
     font-weight: 600;
     color: #512da8;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .contact-container form {
@@ -109,12 +149,41 @@ body {
     color: #e2e2e2;
 }
 
-/* Ensure header stays fixed at the top */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-container {
+        width: 100%; /* Ensure full width on small screens */
+        padding: 20px; /* Reduced padding for smaller screens */
+        margin-top: 60px; /* More space from fixed header */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .contact-container button {
+        font-size: 16px;
+        padding: 15px;
+    }
 }

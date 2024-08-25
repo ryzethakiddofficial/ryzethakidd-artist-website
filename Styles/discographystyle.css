@@ -184,3 +184,102 @@ body {
 .footer .social-icons .icon:hover {
     color: #e2e2e2;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 10px 0 0;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px;
+    }
+
+    /* Discography Navigation */
+    .discography-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Discography Section */
+    .release-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .release-item img {
+        margin-bottom: 15px;
+        width: 100px;
+        height: auto;
+    }
+
+    .release-info {
+        max-width: 100%;
+    }
+
+    .release-info h3 {
+        font-size: 22px;
+    }
+
+    .release-info .release-date {
+        font-size: 14px;
+    }
+
+    .release-info p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer .social-icons .icon {
+        margin: 0 5px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens like phones */
+    .navbar .container {
+        padding: 10px;
+    }
+
+    .nav-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .release-info h3 {
+        font-size: 18px;
+    }
+
+    .release-info p {
+        font-size: 13px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+}

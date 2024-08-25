@@ -12,13 +12,13 @@
 
 <body>
     <!-- Navigation Bar -->
-    <header class="navbar">
+    <header class="navbar" role="banner">
         <div class="container">
-            <a href="index.html" class="logo">Ryze Tha Kidd</a>
-            <nav>
+            <a href="index.html" class="logo" aria-label="Ryze Tha Kidd Homepage">Ryze Tha Kidd</a>
+            <nav role="navigation" aria-label="Main Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="discography.html">Discography</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -27,12 +27,12 @@
     </header>
 
     <!-- Main Content Section -->
-    <section class="main-content">
+    <main class="main-content" role="main">
         <div class="container">
             <!-- Table of Contents Section (Aligned Right) -->
-            <aside class="toc-section">
+            <aside class="toc-section" aria-label="Profile Information">
                 <div class="profile-picture">
-                    <img src="Images/profile.jpg" alt="Ryze Tha Kidd" />
+                    <img src="Images/profile.jpg" alt="Portrait of Ryze Tha Kidd" />
                 </div>
                 <div class="profile-info">
                     <h2>Ryze Tha Kidd</h2>
@@ -45,8 +45,8 @@
             </aside>
 
             <!-- About Me Section -->
-            <section class="about-section">
-                <h1>About Me</h1>
+            <section class="about-section" aria-labelledby="about-me-heading">
+                <h1 id="about-me-heading">About Me</h1>
                 <p><strong>Ryan William Duncuft</strong> (15th September, 2007), known professionally as <strong>Ryze Tha Kidd</strong> (pronounced "rise the kid"), is an upcoming British rapper and singer/songwriter from Mossley, Greater Manchester, UK. His name was derived from his ambition to become the best and 'rise' to the top, hence the name Ryze.</p>
                 <p>Duncuft began his career as an independent artist in 2019 under the name Myth!. His most popular song is his single "Collide". He collaborated with artist Okbreezy on his debut EP, "Is This A Dream?" (2024) and released his debut album, "Healing Wounds" (2024), which contained "Scars" featuring "Emilyn".</p>
 
@@ -59,16 +59,16 @@
                 <p>His music has been labelled as "emo" with music focusing on "every broken heart, every wounded feeling". More specifically, he has been labeled as a hip hop, emo rap, trap, and SoundCloud rap artist. Duncuft switches between writing and freestyling his songs, leaning more towards freestyling to give a more immersive sound.</p>
             </section>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2024 Ryze Tha Kidd. All rights reserved.</p>
             <div class="social-icons">
-                <a href="https://wwww.facebook.com/ryzethakidd" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com/ryzethakidd" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/ryzethakidd" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ryzethakidd" class="icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/ryzethakidd" class="icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ryzethakidd" class="icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
