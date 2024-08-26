@@ -179,11 +179,28 @@ body {
     .contact-container input,
     .contact-container textarea {
         font-size: 16px;
-        padding: 10px;
+        padding: 12px; /* Adjusted padding */
     }
 
     .contact-container button {
         font-size: 16px;
-        padding: 15px;
+        padding: 15px; /* Adjusted padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        font-size: 14px; /* Slightly smaller font size */
+        padding: 10px; /* Adjusted padding */
+    }
+
+    .contact-container button {
+        font-size: 14px; /* Slightly smaller font size */
+        padding: 12px; /* Adjusted padding */
     }
 }

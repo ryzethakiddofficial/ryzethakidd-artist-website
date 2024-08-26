@@ -103,11 +103,26 @@ body {
         flex: 1 1 100%;
         margin: 0; /* Remove margin to prevent overlap */
         margin-bottom: 20px; /* Add space below for separation */
+        position: static; /* Remove sticky positioning for smaller screens */
     }
     
     .about-section {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h1 {
+        font-size: 32px;
+    }
+
+    .about-section h2 {
+        font-size: 26px;
+    }
+
+    .about-section p {
+        font-size: 16px;
     }
 }
 
