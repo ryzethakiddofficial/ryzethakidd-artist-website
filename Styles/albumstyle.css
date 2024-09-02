@@ -103,18 +103,17 @@ body {
 
 .tracklist-buttons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 600px; /* Adjust the width as needed */
-    gap: 20px; /* Add gap between buttons */
+    gap: 20px; /* Add gap between columns */
 }
 
 .tracklist-buttons .track-group {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 280px; /* Adjust to fit within container */
+    width: 100%; /* Full width to ensure three buttons per group */
+    max-width: 280px; /* Adjust to make sure each column fits */
 }
 
 .track-group .track-button {
@@ -222,23 +221,5 @@ body {
     .track-group .track-button {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .album-cover img {
-        max-width: 250px; /* Adjust album cover size for smaller screens */
-    }
-
-    .tracklist h2 {
-        font-size: 24px; /* Slightly smaller font size */
-    }
-
-    .credits h2 {
-        font-size: 24px; /* Slightly smaller font size */
-    }
-
-    .credits p {
-        font-size: 14px; /* Slightly smaller font size */
     }
 }

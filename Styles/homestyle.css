@@ -5,6 +5,7 @@ body {
     background-color: #f0f2f5;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navigation Bar */
@@ -24,6 +25,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 .navbar .logo {
@@ -110,6 +112,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 .feature {
@@ -118,6 +121,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.3s;
 }
 
@@ -136,6 +142,12 @@ body {
 .feature p {
     font-size: 16px;
     color: #666;
+    flex-grow: 1;
+}
+
+.feature .btn.primary-btn {
+    align-self: center;
+    margin-top: 20px;
 }
 
 .feature:hover {
@@ -148,6 +160,7 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 .footer p {
@@ -171,76 +184,33 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    /* Navigation Bar */
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar .nav-links {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 10px 0 0;
-    }
-
-    .navbar .nav-links li {
-        margin: 10px 0;
-    }
-
-    .navbar .logo {
-        margin-bottom: 15px;
-    }
-
-    /* Hero Section */
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-
-    .btn.primary-btn {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Features Section */
     .features .container {
         flex-direction: column;
         align-items: center;
     }
 
     .feature {
-        width: 80%;
+        width: 80%; /* Adjust width for tablets */
         margin-bottom: 20px;
     }
 
-    /* Footer */
-    .footer .social-icons .icon {
-        margin: 0 5px;
-    }
-
-    .footer p {
-        font-size: 12px;
+    .btn.primary-btn {
+        width: 90%; /* Adjust button width for tablets */
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further adjustments for smaller screens like phones */
+    .feature {
+        width: 90%; /* Further adjust width for phones */
+    }
+
     .hero h1 {
         font-size: 28px;
     }
 
     .hero p {
         font-size: 14px;
-    }
-
-    .feature {
-        width: 90%;
     }
 
     .navbar .container {

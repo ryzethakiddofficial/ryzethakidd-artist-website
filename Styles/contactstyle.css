@@ -19,30 +19,36 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar container */
+/* Header (Navbar) */
+.navbar {
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header is above other content */
+    background-color: #ffffff; /* Add a background color if needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px; /* Added padding for better touch targets on mobile */
+    padding: 10px 20px; /* Adjusted padding for better alignment */
 }
 
-/* Navigation Bar Links */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -54,7 +60,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #333;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Consistent padding with other pages */
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -179,28 +185,11 @@ body {
     .contact-container input,
     .contact-container textarea {
         font-size: 16px;
-        padding: 12px; /* Adjusted padding */
+        padding: 10px;
     }
 
     .contact-container button {
         font-size: 16px;
-        padding: 15px; /* Adjusted padding */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-container {
-        padding: 15px; /* Further reduced padding */
-    }
-
-    .contact-container input,
-    .contact-container textarea {
-        font-size: 14px; /* Slightly smaller font size */
-        padding: 10px; /* Adjusted padding */
-    }
-
-    .contact-container button {
-        font-size: 14px; /* Slightly smaller font size */
-        padding: 12px; /* Adjusted padding */
+        padding: 15px;
     }
 }
