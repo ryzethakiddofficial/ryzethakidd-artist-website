@@ -7,9 +7,9 @@ function toggleDarkMode() {
 
     // Toggle dark mode class on body and relevant elements
     body.classList.toggle('dark-mode');
-    navbar.classList.toggle('dark-mode');
-    contactContainer.classList.toggle('dark-mode');
-    footer.classList.toggle('dark-mode');
+    if (navbar) navbar.classList.toggle('dark-mode');
+    if (contactContainer) contactContainer.classList.toggle('dark-mode');
+    if (footer) footer.classList.toggle('dark-mode');
 
     const inputs = document.querySelectorAll('.contact-container input, .contact-container textarea');
     inputs.forEach(input => {
@@ -35,9 +35,12 @@ function checkDarkMode() {
 
     if (darkModeStatus === 'enabled') {
         document.body.classList.add('dark-mode');
-        document.querySelector('.navbar').classList.add('dark-mode');
-        document.querySelector('.contact-container').classList.add('dark-mode');
-        document.querySelector('.footer').classList.add('dark-mode');
+        const navbar = document.querySelector('.navbar');
+        const contactContainer = document.querySelector('.contact-container');
+        const footer = document.querySelector('.footer');
+        if (navbar) navbar.classList.add('dark-mode');
+        if (contactContainer) contactContainer.classList.add('dark-mode');
+        if (footer) footer.classList.add('dark-mode');
 
         const inputs = document.querySelectorAll('.contact-container input, .contact-container textarea');
         inputs.forEach(input => {
@@ -53,3 +56,6 @@ function checkDarkMode() {
 
 // Call checkDarkMode function on page load
 document.addEventListener('DOMContentLoaded', checkDarkMode);
+
+// Event listener for the toggle button
+document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
