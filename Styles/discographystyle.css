@@ -1,3 +1,5 @@
+@import url(homestyle.css);
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -5,6 +7,49 @@ body {
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .discography {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .release-item {
+    background: #2c2c2c;
+    border-radius: 10px;
+}
+
+body.dark-mode .release-info h3,
+body.dark-mode .release-info .release-date,
+body.dark-mode .release-info p {
+    color: #ffffff;
+}
+
+body.dark-mode .footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #bb86fc;
 }
 
 /* Navigation Bar */
@@ -91,11 +136,14 @@ body {
 
 /* Release Sections */
 .release-section {
-    display: none;
+    display: none; /* Initially hide all sections */
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease; /* Transition for fade effect */
 }
 
 .release-section.active {
-    display: block;
+    display: block; /* Show the active section */
+    opacity: 1; /* Set opacity to 1 when active */
 }
 
 .release-item {
@@ -164,6 +212,14 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    position: relative; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
@@ -173,10 +229,12 @@ body {
 
 .footer .social-icons {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the social icons */
 }
 
 .footer .social-icons .icon {
-    margin: 0 10px;
     color: #ffffff;
     transition: color 0.3s;
 }
@@ -184,6 +242,7 @@ body {
 .footer .social-icons .icon:hover {
     color: #e2e2e2;
 }
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {

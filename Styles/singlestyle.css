@@ -66,10 +66,19 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    padding-top: 10px; /* Additional padding to prevent overlap with navbar */
+    padding-top: 20px; /* Additional padding to prevent overlap with navbar */
 }
 
-/* Back Button */
+/* Back to Discography Button */
+#back-to-discography {
+    position: fixed;
+    left: 40px;  /* Increase horizontal spacing */
+    top: 120px;  /* Increase vertical spacing */
+    z-index: 100;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
 .primary-btn {
     display: inline-flex;
     align-items: center;
@@ -181,8 +190,14 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Make footer span full width */
-    margin-top: 20px; /* Space before the footer */
+    position: relative; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
@@ -202,6 +217,57 @@ body {
 
 .footer .social-icons .icon:hover {
     color: #e2e2e2;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e2e2e2; /* Light text color */
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark navbar background */
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2; /* Light text color for links */
+}
+
+body.dark-mode .toc-section {
+    background-color: #1f1f1f; /* Dark background for Table of Contents */
+    color: #e2e2e2; /* Light text color */
+    border-radius: 12px; /* Maintain border radius */
+}
+
+body.dark-mode .toc-section .single-info h2 {
+    color: #bb86fc; /* Bright color for title in dark mode */
+}
+
+body.dark-mode .toc-section .single-info p {
+    color: #e2e2e2; /* Light color for info text */
+}
+
+body.dark-mode .single-section {
+    background-color: #1f1f1f; /* Dark background for single section */
+}
+
+body.dark-mode .single-section h1,
+body.dark-mode .single-section h2,
+body.dark-mode .single-section p {
+    color: #e2e2e2; /* Light text for all headers and paragraphs */
+}
+
+body.dark-mode .footer {
+    background-color: #1f1f1f; /* Dark footer background */
+    color: #e2e2e2; /* Light footer text color */
+}
+
+body.dark-mode .footer .social-icons .icon {
+    color: #bb86fc; /* Bright social icon color */
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #e2e2e2; /* Hover color for icons */
 }
 
 /* Responsive Design for Mobile */

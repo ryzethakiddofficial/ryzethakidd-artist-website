@@ -6,69 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Styles/homestyle.css">
-    <link rel="icon" href="Images/WebpageIcon.ico" type="Images/x-icon">
-    <meta name="viewport" content="width=1200, initial-scale=1">
+    <link rel="icon" href="Images/WebpageIcon.ico" type="image/x-icon">
     <title>Home | Ryze Tha Kidd</title>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Ryze Tha Kidd</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="discography.html">Discography</a></li>
-                    <li><a href="merchupdate.html">Merch</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="welcome-screen">
+        <h1 id="welcome-message"></h1>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to the Home of Ryze Tha Kidd</h1>
-            <p>Your gateway to seamless music experiences. Explore my discography and merchandise.</p>
-            <a href="about.html" class="btn primary-btn">About Me</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <i class="fas fa-user"></i>
-                <h3>About Me</h3>
-                <p>I'm a British Rapper from <a href="https://en.wikipedia.org/wiki/Mossley">Mossley, Greater Manchester, UK</a>. Making music since 2019, my style is inspired by the late <a href="https://en.wikipedia.org/wiki/Juice_Wrld">Juice WRLD</a>. I have rebranded several times and now go by <a href="https://g.co/kgs/QKmGn7V">Ryze Tha Kidd</a>.</p>
-                <a href="about.html" class="btn primary-btn">Learn More</a>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <div class="left-menu" id="leftMenu">
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='index.html'">Home</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='about.html'">About</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='contact.html'">Contact</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='discography.html'">Discography</div>
+                </div>
+                <a href="index.html" class="logo">Ryze Tha Kidd</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="discography.html">Discography</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <button class="btn btn-darkmode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                        <li>
+                            <button class="menu-toggle" id="menuToggle">☰</button> <!-- Menu Toggle Button -->
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </header>
 
-            <div class="feature">
-                <i class="fas fa-music"></i>
-                <h3>Discography</h3>
-                <p>Check out my complete discography and download your favorite tracks directly to your device for free.</p>
-                <a href="discography.html" class="btn primary-btn">View Discography</a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to the Home of Ryze Tha Kidd</h1>
+                <p>Your gateway to seamless music experiences. Explore my discography and merchandise.</p>
+                <a href="about.html" class="btn">About Me</a>
             </div>
+        </section>
 
-            <div class="feature">
-                <i class="fas fa-envelope"></i>
-                <h3>Merch</h3>
-                <p>View our vast variety of Ryze Merch products. 3 Major Annual releases.</p>
-                <a href="merch.html" class="btn primary-btn">View Merch</a>
-            </div>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <i class="fas fa-user"></i>
+                    <h3>About Me</h3>
+                    <p>I'm a British Rapper from <a href="https://en.wikipedia.org/wiki/Mossley">Mossley, Greater Manchester, UK</a>. Making music since 2019, my style is inspired by the late <a href="https://en.wikipedia.org/wiki/Juice_Wrld">Juice WRLD</a>.</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
 
-            <div class="feature">
-                <i class="fas fa-envelope"></i>
-                <h3>Contact Me</h3>
-                <p>If you have any questions or inquiries, feel free to contact me through this page.</p>
-                <a href="contact.html" class="btn primary-btn">Get in Touch</a>
+                <div class="feature">
+                    <i class="fas fa-music"></i>
+                    <h3>Discography</h3>
+                    <p>Check out my complete discography and download your favorite tracks directly to your device for free.</p>
+                    <a href="discography.html" class="btn">View Discography</a>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Merch</h3>
+                    <p>View our vast variety of Ryze Collective Media Group products. 3 Major Annual releases.</p>
+                    <a href="merchupdate.html" class="btn">View Merch</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <div id="overlay" class="overlay" style="display: none;">
+        <img id="cover-art" class="cover-art" src="" alt="Cover Art">
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -81,5 +94,12 @@
             </div>
         </div>
     </footer>
+
+    <script src="Scripts/welcome.js"></script>
+    <script src="Scripts/menu.js"></script>
+    <script src="Scripts/idle.js"></script>
+    <script src="Scripts/darkmode.js"></script>
+    <script src="Scripts/ratelimiter.js"></script>
 </body>
+
 </html>

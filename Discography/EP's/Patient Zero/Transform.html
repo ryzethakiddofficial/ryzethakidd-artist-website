@@ -12,27 +12,38 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container">
-            <a href="../../../index.html" class="logo">Ryze Tha Kidd</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../../../index.html">Home</a></li>
-                    <li><a href="../../../about.html">About</a></li>
-                    <li><a href="../../../discography.html">Discography</a></li>
-                    <li><a href="../../../merchupdate.html">Merch</a></li>
-                    <li><a href="../../../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <div class="left-menu" id="leftMenu">
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='../../../index.html'">Home</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='../../../about.html'">About</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='../../../contact.html'">Contact</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='../../../discography.html'">Discography</div>
+                </div>
+                <a href="index.html" class="logo">Ryze Tha Kidd</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a href="../../../about.html">About</a></li>
+                        <li><a href="../../../discography.html">Discography</a></li>
+                        <li><a href="../../../contact.html">Contact</a></li>
+                        <li>
+                            <button class="btn btn-darkmode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                        <li>
+                            <button class="menu-toggle" id="menuToggle">☰</button> <!-- Menu Toggle Button -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <!-- Main Content Section -->
     <section class="main-content">
         <div class="container">
             <!-- Back Button -->
-            <a href="../../EP's/patient-zero.html" class="btn primary-btn">
+            <a href="../../EP's/patient-zero.html" class="btn primary-btn" id="back-to-discography">
                 <i class="fa-solid fa-arrow-left"></i> Back to Patient Zero
             </a>
 
@@ -46,7 +57,7 @@
                 </div>
 
                 <div class="single-info">
-                    <a href="https://ffm.to/rtk-patient-zero" class="btn primary-btn" target="_blank">Listen Now</a>
+                    <a href="https://distrokid.com/hyperfollow/ryzethakidd1/patient-zero-3" class="btn primary-btn" target="_blank">Listen Now</a>
                     <h2>Transform</h2>
                     <p><strong>Release Date:</strong> 24th May 2024</p>
                     <p><strong>Genre:</strong> Trap</p>
@@ -106,6 +117,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="../../../Scripts/menu.js"></script>
+    <script src="../../../Scripts/idle.js"></script>
+    <script src="../../../Scripts/darkmode.js"></script>
 </body>
 
 </html>
