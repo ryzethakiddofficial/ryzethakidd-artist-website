@@ -1,35 +1,111 @@
 @import url(homestyle.css);
 
 /* Global Styles */
-body {
+html, body {
+    height: 100%;
+    margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333;
-    line-height: 1.6;
     background-color: #f0f2f5;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e2e2e2;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #181818;
-    color: #ffffff;
+    background-color: #121212; /* Dark background */
+    background: linear-gradient(to right, #1a1a1a, #121212); /* Dark gradient */
+    color: #e0e0e0; /* Light text color */
 }
 
-/* Header (Navbar) */
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
 }
 
 body.dark-mode .navbar {
-    background-color: #282828; /* Dark background for navbar */
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+}
+
+.navbar .nav-links li {
+    margin: 0 20px;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transition for link color */
+    padding: 10px; /* Added padding for better click area */
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+.navbar .nav-links a:hover {
+    color: #512da8;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+/* Dark Mode Button Alignment */
+.btn.btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+.navbar .btn-darkmode-btn {
+    margin-left: 20px;
 }
 
 /* Main Content Section */

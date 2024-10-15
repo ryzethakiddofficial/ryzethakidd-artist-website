@@ -1,13 +1,5 @@
 @import url('homestyle.css'); /* Import homestyle.css to inherit global styles */
 
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
 /* Global Styles */
 html, body {
     height: 100%;
@@ -19,11 +11,23 @@ html, body {
     transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #e2e2e2;
+}
+
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212; /* Dark background */
     background: linear-gradient(to right, #1a1a1a, #121212); /* Dark gradient */
     color: #e0e0e0; /* Light text color */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Bar */
@@ -93,6 +97,15 @@ body.dark-mode .navbar .nav-links a {
 
 body.dark-mode .navbar .nav-links a:hover {
     color: #bb86fc;
+}
+
+/* Dark Mode Button Alignment */
+.btn.btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+.navbar .btn-darkmode-btn {
+    margin-left: 20px;
 }
 
 /* Dark Mode for Links */

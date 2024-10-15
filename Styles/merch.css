@@ -1,3 +1,5 @@
+@import url(homestyle.css);
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -5,6 +7,49 @@ body {
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .discography {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .release-item {
+    background: #2c2c2c;
+    border-radius: 10px;
+}
+
+body.dark-mode .release-info h3,
+body.dark-mode .release-info .release-date,
+body.dark-mode .release-info p {
+    color: #ffffff;
+}
+
+body.dark-mode .footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #bb86fc;
 }
 
 /* Navigation Bar */
@@ -53,8 +98,8 @@ body {
     color: #512da8;
 }
 
-/* Merch Navigation */
-.merch-nav {
+/* Discography Navigation */
+.discography-nav {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -78,27 +123,30 @@ body {
     transform: scale(1.05);
 }
 
-/* Merch Section */
-.merch {
+/* Discography Section */
+.discography {
     padding: 60px 20px;
     background-color: #ffffff;
 }
 
-.merch .container {
+.discography .container {
     max-width: 1200px;
     margin: auto;
 }
 
-/* Product Sections */
-.product-section {
-    display: none;
+/* Release Sections */
+.release-section {
+    display: none; /* Initially hide all sections */
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease; /* Transition for fade effect */
 }
 
-.product-section.active {
-    display: block;
+.release-section.active {
+    display: block; /* Show the active section */
+    opacity: 1; /* Set opacity to 1 when active */
 }
 
-.product-item {
+.release-item {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -108,24 +156,24 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Ensures image and content stay within bounds */
 }
 
-.product-item a {
+.release-item a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* Ensure text color is inherited from parent */
     width: 100%;
     height: 100%;
 }
 
-.product-item:hover {
+.release-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.product-item img {
+.release-item img {
     width: 150px;
     height: auto;
     border-radius: 8px;
@@ -133,27 +181,27 @@ body {
     transition: transform 0.3s;
 }
 
-.product-item:hover img {
+.release-item:hover img {
     transform: scale(1.05);
 }
 
-.product-info {
+.release-info {
     max-width: 800px;
 }
 
-.product-info h3 {
+.release-info h3 {
     font-size: 26px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.product-info .product-price {
+.release-info .release-date {
     font-size: 16px;
     color: #777;
     margin-bottom: 10px;
 }
 
-.product-info p {
+.release-info p {
     font-size: 16px;
     color: #666;
 }
@@ -164,6 +212,14 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    position: relative; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
@@ -173,10 +229,12 @@ body {
 
 .footer .social-icons {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the social icons */
 }
 
 .footer .social-icons .icon {
-    margin: 0 10px;
     color: #ffffff;
     transition: color 0.3s;
 }
@@ -184,6 +242,7 @@ body {
 .footer .social-icons .icon:hover {
     color: #e2e2e2;
 }
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -193,37 +252,77 @@ body {
         align-items: flex-start;
     }
 
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 10px 0 0;
+    }
+
     .navbar .nav-links li {
         margin: 10px 0;
     }
 
-    .product-item {
+    .navbar .logo {
+        margin-bottom: 15px;
+    }
+
+    /* Discography Navigation */
+    .discography-nav {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-    }
-
-    .product-item img {
-        margin-bottom: 20px;
-    }
-
-    .product-info {
-        max-width: 100%;
-    }
-
-    .merch-nav {
-        flex-direction: column;
     }
 
     .nav-btn {
-        margin: 10px 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Discography Section */
+    .release-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .release-item img {
+        margin-bottom: 15px;
+        width: 100px;
+        height: auto;
+    }
+
+    .release-info {
+        max-width: 100%;
+    }
+
+    .release-info h3 {
+        font-size: 22px;
+    }
+
+    .release-info .release-date {
+        font-size: 14px;
+    }
+
+    .release-info p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer .social-icons .icon {
+        margin: 0 5px;
+    }
+
+    .footer p {
+        font-size: 12px;
     }
 }
 
-/* Additional Mobile Styling */
 @media (max-width: 480px) {
-    .navbar .logo {
-        font-size: 20px;
+    /* Further adjustments for very small screens like phones */
+    .navbar .container {
+        padding: 10px;
     }
 
     .nav-btn {
@@ -231,20 +330,15 @@ body {
         padding: 8px 16px;
     }
 
-    .product-info h3 {
-        font-size: 20px;
+    .release-info h3 {
+        font-size: 18px;
     }
 
-    .product-info p,
-    .product-info .product-price {
-        font-size: 14px;
+    .release-info p {
+        font-size: 13px;
     }
 
     .footer p {
-        font-size: 12px;
-    }
-
-    .footer .social-icons .icon {
-        font-size: 18px;
+        font-size: 11px;
     }
 }
