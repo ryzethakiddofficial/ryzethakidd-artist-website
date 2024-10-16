@@ -293,7 +293,7 @@ body.dark-mode .feature p {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    position: fixed; /* Keep the footer at the bottom of the screen */
+    position: inherit; /* Keep the footer at the bottom of the screen */
     bottom: 0;
     left: 0;
     width: 100%; /* Make footer span the full width */
