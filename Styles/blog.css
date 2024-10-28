@@ -1,0 +1,416 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e2e2e2;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
+}
+
+body.dark-mode .navbar {
+    background-color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center; /* Center align links vertically */
+    list-style: none;
+    margin-right: auto; /* Adjust right margin if needed */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar .nav-links li {
+    margin: 0 20px; /* Space between links */
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transition for link color */
+    padding: 10px 0; /* Ensure padding for better click area */
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+.navbar .nav-links a:hover {
+    color: #512da8;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+/* Dark Mode Button Alignment */
+.btn.btn-darkmode-btn,
+.menu-toggle {
+    margin-left: 20px; /* Space between buttons and links */
+    align-self: center; /* Center align buttons in the navbar */
+}
+
+.navbar .btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center; /* Center text within the post */
+}
+
+body.dark-mode .blog-post {
+    background-color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post-title {
+    font-size: 28px; /* Increased title size for better readability */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .blog-post-title {
+    color: #e2e2e2;
+}
+
+.blog-post-date {
+    font-size: 18px; /* Increased date size */
+    color: #777;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .blog-post-date {
+    color: #bbb;
+}
+
+.blog-post-content {
+    font-size: 20px; /* Increased content size for better readability */
+    color: #555;
+    text-align: center; /* Center content text */
+}
+
+body.dark-mode .blog-post-content {
+    color: #ddd;
+}
+
+.blog .container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
+
+.blog-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #512da8;
+}
+
+body.dark-mode .blog-title {
+    color: #bb86fc;
+}
+
+.blog-entries {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .blog-post {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .blog-post-title {
+    color: #e2e2e2;
+}
+
+.blog-post-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .blog-post-date {
+    color: #bbb;
+}
+
+.blog-post-excerpt {
+    font-size: 16px;
+    color: #555;
+}
+
+body.dark-mode .blog-post-excerpt {
+    color: #ddd;
+}
+
+/* Buttons */
+.btn {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-mode .btn {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.btn:hover {
+    background-color: #5c6bc0;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .btn:hover {
+    background-color: #9c63e6;
+}
+
+/* Footer */
+.footer {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the social icons */
+}
+
+.footer .social-icons .icon {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer .social-icons .icon:hover {
+    color: #e2e2e2;
+}
+
+body.dark-mode .footer {
+    background-color: #121212;
+    color: #e2e2e2;
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #bb86fc;
+}
+
+.left-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff; /* Menu background color */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    opacity: 0; /* Start as invisible */
+    visibility: hidden; /* Ensure it's not visible */
+    transition: left 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+    z-index: 999; /* Ensure it's above other content */
+    padding: 20px; /* Add padding to the left menu */
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+}
+
+/* When the menu is open */
+.left-menu.open {
+    left: 0; /* Slide in */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+    display: flex; /* Use flex to align items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Menu Item Styles */
+.left-menu .menu-item {
+    background-color: #7a1e9d; /* Lighter purple background */
+    color: white; /* White text for better contrast */
+    padding: 12px 15px; /* Increased padding for better touch target */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for item hover */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded edges */
+    margin: 10px 0; /* Vertical spacing between buttons */
+    width: auto; /* Adjust width to content */
+    max-width: 90%; /* Limit max width of buttons */
+    display: block; /* Ensure block-level display */
+    font-weight: bold; /* Make text bold for better visibility */
+    font-size: 16px; /* Increase font size for readability */
+}
+
+/* Hover effect for menu items */
+.left-menu .menu-item:hover {
+    background-color: #5c6bc0; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Styles for dark mode */
+body.dark-mode .left-menu {
+    background-color: #121212; /* Dark mode background */
+}
+
+body.dark-mode .left-menu .menu-item {
+    background-color: #2a2a2a; /* Darker background for items */
+    color: #e2e2e2; /* Light text for dark mode */
+}
+
+body.dark-mode .left-menu .menu-item:hover {
+    background-color: #2a2a2a; /* Darker hover background in dark mode */
+}
+
+/* List styles */
+.left-menu ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 20px 0; /* Add some margin above and below the list */
+}
+
+.left-menu ul li {
+    padding: 15px 20px; /* Spacing for menu items */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle divider line */
+}
+
+.left-menu ul li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+body.dark-mode .left-menu ul li:hover {
+    background-color: #121212; /* Highlight for dark mode */
+}
+
+/* Link styles */
+.left-menu ul li a {
+    color: #7a1e9d; /* Lighter purple for links */
+    text-decoration: none;
+    font-weight: bold; /* Bold links for visibility */
+}
+
+/* Link hover effect */
+.left-menu ul li a:hover {
+    color: #5c6bc0; /* Change link color on hover */
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        margin: 0; /* Reset margins */
+    }
+
+    .footer {
+        padding: 10px; /* Reduce padding in footer */
+    }
+
+    .blog-title {
+        font-size: 28px; /* Adjust blog title size for mobile */
+    }
+
+    .blog-post-title {
+        font-size: 24px; /* Adjust title size for mobile */
+    }
+
+    .blog-post-content {
+        font-size: 18px; /* Adjust content size for mobile */
+    }
+}
