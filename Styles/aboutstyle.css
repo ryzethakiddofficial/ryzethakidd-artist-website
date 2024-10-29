@@ -1,0 +1,270 @@
+@import url(homestyle.css);
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e2e2e2;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
+}
+
+body.dark-mode .navbar {
+    background-color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center; /* Center align links vertically */
+    list-style: none;
+    margin-right: auto; /* Adjust right margin if needed */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar .nav-links li {
+    margin: 0 20px; /* Space between links */
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transition for link color */
+    padding: 10px 0; /* Ensure padding for better click area */
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+.navbar .nav-links a:hover {
+    color: #512da8;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+/* Dark Mode Button Alignment */
+.btn.btn-darkmode-btn,
+.menu-toggle {
+    margin-left: 20px; /* Space between buttons and links */
+    align-self: center; /* Center align buttons in the navbar */
+}
+
+.navbar .btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+/* Main Content Section */
+.main-content {
+    padding-top: 100px;
+}
+
+/* Main Content Section */
+.main-content .container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Table of Contents Section */
+.toc-section {
+    flex: 0 0 30%;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 100px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+body.dark-mode .toc-section {
+    background-color: #1d1d1d; /* Dark background for Table of Contents */
+    color: #ffffff; /* White text for Table of Contents */
+}
+
+.toc-section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.toc-section .profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toc-section .profile-picture img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toc-section .profile-info {
+    text-align: left;
+}
+
+.toc-section .profile-info h2 {
+    font-size: 28px;
+    color: #ffffff; /* White for dark mode */
+    margin-bottom: 10px;
+}
+
+.toc-section .profile-info p {
+    font-size: 16px;
+    color: #cccccc; /* Light gray for dark mode */
+    margin: 8px 0;
+}
+
+/* About Me Section */
+.about-section {
+    flex: 1 1 70%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body.dark-mode .about-section {
+    background-color: #1d1d1d; /* Dark background for About Me section */
+    color: #ffffff; /* White text for About Me section */
+}
+
+.about-section h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+body.dark-mode .about-section h1 {
+    color: #ffffff; /* White for dark mode */
+}
+
+.about-section h2 {
+    font-size: 30px;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+body.dark-mode .about-section h2 {
+    color: #ffffff; /* White for dark mode */
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+body.dark-mode .about-section p {
+    color: #cccccc; /* Light gray for dark mode */
+}
+
+/* Footer */
+.footer {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the social icons */
+}
+
+.footer .social-icons .icon {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer .social-icons .icon:hover {
+    color: #e2e2e2;
+}
+
+
+body.dark-mode .footer {
+    background-color: #8558bb; /* Dark background for footer */
+}

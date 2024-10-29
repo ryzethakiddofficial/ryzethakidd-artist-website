@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Styles/aboutstyle.css">
+    <link rel="icon" href="Images/WebpageIcon.ico" type="Images/x-icon">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>About Me | Ryze Tha Kidd</title>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <div class="left-menu" id="leftMenu">
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='index.html'">Home</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='about.html'">About</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='contact.html'">Contact</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='discography.html'">Discography</div>
+                </div>
+                <a href="index.html" class="logo">Ryze Tha Kidd</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="discography.html">Discography</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <!-- <li><a href="downloads.html">Downloads</a></li> -->
+                        <li>
+                            <button class="btn btn-darkmode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                        <li>
+                            <button class="menu-toggle" id="menuToggle">☰</button> <!-- Menu Toggle Button -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content" role="main">
+        <div class="container">
+            <!-- Table of Contents Section (Aligned Right) -->
+            <aside class="toc-section" aria-label="Profile Information">
+                <div class="profile-picture">
+                    <img src="Images/Logo.png" alt="Portrait of Ryze Tha Kidd" />
+                </div>
+                <p>When you download the installer, it may be flagged as a virus. This is a false positive and occurs because I do not have a code-signed certificate, which is typically expensive, and the publisher is listed as 'Unknown.' Rest assured, the download is safe</p>
+                <a href="https://github.com/ryzethakiddofficial/music-client/raw/refs/heads/main/Ryze%20Tha%20Kidd%20Music%20Client%20Installer.msi"><button class="btn btn-darkmode-btn">Download Music Client | Windows</button></a>
+                <!-- <a href="Ryze Tha Kidd Music Downloader Client.zip"><button class="btn btn-darkmode-btn">Download Music Client | Mac</button></a>
+                <a href="Ryze Tha Kidd Music Downloader Client.zip"><button class="btn btn-darkmode-btn">Download Music Client | Android</button></a>-->
+            </aside>
+
+            <!-- About Me Section -->
+            <section class="about-section" aria-labelledby="about-me-heading">
+                <h1 id="about-me-heading">Download Music Client</h1>
+                <p>Download the music client to download the mp3 files for my music.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Ryze Tha Kidd. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ryzethakidd" class="icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/ryzethakidd" class="icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ryzethakidd" class="icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/menu.js"></script>
+    <script src="Scripts/idle.js"></script>
+    <script src="Scripts/darkmode.js"></script>
+</body>
+
+</html>
