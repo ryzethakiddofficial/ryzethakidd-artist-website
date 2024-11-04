@@ -493,3 +493,20 @@ body.dark-mode .listen-single {
     background-color: #121212; /* Darker background for items */
     color: #e2e2e2; /* Light text for dark mode */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links on smaller screens */
+        align-items: flex-start; /* Align links to the start */
+    }
+
+    .features .container {
+        flex-direction: column; /* Stack feature cards vertically */
+    }
+
+    .feature {
+        width: 100%; /* Full width for cards on smaller screens */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}

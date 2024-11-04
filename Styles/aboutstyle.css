@@ -51,6 +51,7 @@ body.dark-mode .navbar {
     width: 100%;
 }
 
+/* Logo */
 .navbar .logo {
     font-size: 26px;
     font-weight: 700;
@@ -64,6 +65,7 @@ body.dark-mode .navbar .logo {
     color: #bb86fc;
 }
 
+/* Navigation Links */
 .navbar .nav-links {
     display: flex;
     align-items: center; /* Center align links vertically */
@@ -103,16 +105,12 @@ body.dark-mode .navbar .nav-links a:hover {
     align-self: center; /* Center align buttons in the navbar */
 }
 
-.navbar .btn-darkmode-btn {
-    margin-left: 20px;
-}
-
 /* Main Content Section */
 .main-content {
     padding-top: 100px;
 }
 
-/* Main Content Section */
+/* Main Content Section Container */
 .main-content .container {
     display: flex;
     gap: 20px;
@@ -147,6 +145,7 @@ body.dark-mode .toc-section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Profile Picture in TOC */
 .toc-section .profile-picture {
     text-align: center;
     margin-bottom: 20px;
@@ -160,6 +159,7 @@ body.dark-mode .toc-section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Profile Info in TOC */
 .toc-section .profile-info {
     text-align: left;
 }
@@ -264,7 +264,51 @@ body.dark-mode .about-section p {
     color: #e2e2e2;
 }
 
-
 body.dark-mode .footer {
     background-color: #8558bb; /* Dark background for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+        transform: scale(0.95); /* Scale down navbar on smaller screens */
+    }
+
+    .content-wrapper {
+        transform: scale(0.95); /* Scale down content wrapper */
+    }
+
+    .toc-section {
+        flex: 0 0 100%; /* Take full width on small screens */
+        position: relative; /* Remove sticky positioning */
+        margin-bottom: 20px; /* Add space below TOC */
+    }
+
+    .about-section {
+        flex: 1 1 100%; /* Take full width on small screens */
+    }
+
+    .footer {
+        transform: scale(0.95); /* Scale down footer */
+    }
+}
+
+/* Additional scaling for very small screens */
+@media (max-width: 480px) {
+    .navbar {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
+
+    .content-wrapper {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
+
+    .toc-section {
+        margin-bottom: 10px; /* Reduce margin for small screens */
+    }
+
+    .footer {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
 }

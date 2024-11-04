@@ -16,12 +16,6 @@ body.dark-mode {
     color: #e2e2e2;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-}
-
 /* Content Wrapper */
 .content-wrapper {
     min-height: 100vh;
@@ -239,4 +233,38 @@ body.dark-mode .footer {
 
 body.dark-mode .footer .social-icons .icon:hover {
     color: #bb86fc;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar .logo {
+        font-size: 22px; /* Reduce logo size */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align links to the start */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0; /* Space between links */
+    }
+
+    .contact-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .footer {
+        padding: 10px 0; /* Reduce footer padding */
+    }
+
+    .footer p {
+        font-size: 12px; /* Smaller font size for footer */
+    }
 }

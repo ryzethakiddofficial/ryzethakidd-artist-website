@@ -50,7 +50,7 @@ body.dark-mode .navbar {
 }
 
 .navbar .logo {
-    font-size: 26px;
+    font-size: 2rem; /* Use rem for scaling */
     font-weight: 700;
     color: #512da8;
     text-decoration: none;
@@ -111,7 +111,7 @@ body.dark-mode .navbar .nav-links a:hover {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
     text-align: center; /* Center text within the post */
 }
 
@@ -120,8 +120,12 @@ body.dark-mode .blog-post {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.blog-post:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
 .blog-post-title {
-    font-size: 28px; /* Increased title size for better readability */
+    font-size: 1.75rem; /* Use rem for scaling */
     color: #333;
     margin-bottom: 10px;
 }
@@ -131,7 +135,7 @@ body.dark-mode .blog-post-title {
 }
 
 .blog-post-date {
-    font-size: 18px; /* Increased date size */
+    font-size: 1.125rem; /* Use rem for scaling */
     color: #777;
     margin-bottom: 15px;
 }
@@ -141,7 +145,7 @@ body.dark-mode .blog-post-date {
 }
 
 .blog-post-content {
-    font-size: 20px; /* Increased content size for better readability */
+    font-size: 1.25rem; /* Use rem for scaling */
     color: #555;
     text-align: center; /* Center content text */
 }
@@ -157,7 +161,7 @@ body.dark-mode .blog-post-content {
 }
 
 .blog-title {
-    font-size: 36px;
+    font-size: 2.25rem; /* Use rem for scaling */
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
@@ -172,52 +176,6 @@ body.dark-mode .blog-title {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-}
-
-.blog-post {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-body.dark-mode .blog-post {
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.blog-post:hover {
-    transform: translateY(-5px);
-}
-
-.blog-post-title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-body.dark-mode .blog-post-title {
-    color: #e2e2e2;
-}
-
-.blog-post-date {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-body.dark-mode .blog-post-date {
-    color: #bbb;
-}
-
-.blog-post-excerpt {
-    font-size: 16px;
-    color: #555;
-}
-
-body.dark-mode .blog-post-excerpt {
-    color: #ddd;
 }
 
 /* Buttons */
@@ -238,7 +196,7 @@ body.dark-mode .btn {
 
 .btn:hover {
     background-color: #5c6bc0;
-    transform: translateY(-2px);
+    transform: scale(1.05); /* Scale on hover */
 }
 
 body.dark-mode .btn:hover {
@@ -263,7 +221,7 @@ body.dark-mode .btn:hover {
 
 .footer p {
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 14px; /* Consider scaling for better readability */
 }
 
 .footer .social-icons {
@@ -331,57 +289,65 @@ body.dark-mode .footer .social-icons .icon:hover {
     max-width: 90%; /* Limit max width of buttons */
     display: block; /* Ensure block-level display */
     font-weight: bold; /* Make text bold for better visibility */
-    font-size: 16px; /* Increase font size for readability */
+    font-size: 1rem; /* Use rem for scaling */
 }
 
 /* Hover effect for menu items */
 .left-menu .menu-item:hover {
-    background-color: #5c6bc0; /* Darker purple on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #512da8; /* Darker purple on hover */
+    transform: scale(1.05); /* Scale up on hover */
 }
 
-/* Styles for dark mode */
-body.dark-mode .left-menu {
-    background-color: #121212; /* Dark mode background */
+/* Active state for selected menu item */
+.left-menu .menu-item.active {
+    background-color: #512da8; /* Highlight active item */
 }
 
-body.dark-mode .left-menu .menu-item {
-    background-color: #2a2a2a; /* Darker background for items */
-    color: #e2e2e2; /* Light text for dark mode */
+/* Close Button */
+.menu-toggle {
+    position: absolute; /* Position toggle button */
+    top: 15px; /* Space from top */
+    left: 15px; /* Space from left */
+    background-color: #512da8; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded edges */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-body.dark-mode .left-menu .menu-item:hover {
-    background-color: #2a2a2a; /* Darker hover background in dark mode */
+/* Hover effect for the toggle button */
+.menu-toggle:hover {
+    background-color: #5c6bc0; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale up on hover */
 }
 
-/* List styles */
-.left-menu ul {
-    list-style: none; /* Remove bullets */
-    padding: 0;
-    margin: 20px 0; /* Add some margin above and below the list */
-}
+/* Add Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+    }
 
-.left-menu ul li {
-    padding: 15px 20px; /* Spacing for menu items */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle divider line */
-}
+    .navbar .nav-links li {
+        margin: 10px 0; /* Space between links */
+    }
 
-.left-menu ul li:hover {
-    background-color: #f0f0f0; /* Highlight on hover */
-}
+    .btn {
+        padding: 10px 20px; /* Smaller button padding */
+        font-size: 0.9rem; /* Reduce font size */
+    }
 
-body.dark-mode .left-menu ul li:hover {
-    background-color: #121212; /* Highlight for dark mode */
-}
+    .blog-post {
+        padding: 15px; /* Smaller padding */
+    }
 
-/* Link styles */
-.left-menu ul li a {
-    color: #7a1e9d; /* Lighter purple for links */
-    text-decoration: none;
-    font-weight: bold; /* Bold links for visibility */
-}
+    .blog-title, .blog-post-title {
+        font-size: 1.5rem; /* Adjust for smaller screens */
+    }
 
-/* Link hover effect */
-.left-menu ul li a:hover {
-    color: #5c6bc0; /* Change link color on hover */
+    .blog-post-content, .blog-post-date {
+        font-size: 1rem; /* Adjust font size */
+    }
 }

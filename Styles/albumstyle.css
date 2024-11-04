@@ -37,6 +37,7 @@ body.dark-mode {
     width: 100%;
     z-index: 100;
     transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
+    transform: scale(1); /* Initial scale for navbar */
 }
 
 body.dark-mode .navbar {
@@ -130,6 +131,7 @@ body.dark-mode .navbar .nav-links a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    transform: scale(1); /* Initial scale for album section */
 }
 
 body.dark-mode .album-section {
@@ -288,35 +290,55 @@ body.dark-mode .credits p {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    transform: scale(1); /* Initial scale for footer */
 }
 
 .footer p {
     margin: 10px 0;
-    font-size: 14px;
 }
 
-.footer .social-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between the social icons */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+        transform: scale(0.95); /* Scale down navbar on smaller screens */
+    }
+
+    .album-section {
+        padding: 15px;
+        transform: scale(0.95); /* Scale down album section */
+    }
+
+    .footer {
+        padding: 15px 0;
+        transform: scale(0.95); /* Scale down footer */
+    }
+
+    .primary-btn {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .tracklist-buttons {
+        flex-direction: column; /* Stack buttons on small screens */
+        align-items: center; /* Center buttons in column */
+    }
+
+    .track-group {
+        width: 100%; /* Ensure full width for track groups */
+    }
 }
 
-.footer .social-icons .icon {
-    color: #ffffff;
-    transition: color 0.3s;
-}
+/* Additional scaling for very small screens */
+@media (max-width: 480px) {
+    .navbar {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
 
-.footer .social-icons .icon:hover {
-    color: #e2e2e2;
-}
+    .album-section {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
 
-
-body.dark-mode .footer {
-    background-color: #8558bb;
-    color: #e2e2e2;
-}
-
-body.dark-mode .footer .social-icons .icon:hover {
-    color: #bb86fc;
+    .footer {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
 }

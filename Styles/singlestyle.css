@@ -10,6 +10,7 @@ html, body {
     background-color: #f0f2f5;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
+    touch-action: pan-x pan-y; /* Allow touch panning */
 }
 
 /* Dark Mode Styles */
@@ -51,6 +52,7 @@ body.dark-mode .navbar {
     max-width: 1200px;
     margin: auto;
     width: 100%;
+    padding: 0 15px; /* Add horizontal padding */
 }
 
 .navbar .logo {
@@ -273,7 +275,6 @@ body.dark-mode .navbar .nav-links a:hover {
     color: #e2e2e2;
 }
 
-
 body.dark-mode .footer {
     background-color: #8558bb;
     color: #e2e2e2;
@@ -308,5 +309,76 @@ body.dark-mode .single-section {
 body.dark-mode .single-section h1,
 body.dark-mode .single-section h2,
 body.dark-mode .single-section p {
-    color: #e2e2e2; /* Light text for all headers and paragraphs */
+    color: #e2e2e2; /* Light text color for headings and paragraphs */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+    
+    .main-content .container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .toc-section,
+    .single-section {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Space between stacked elements */
+    }
+
+    .navbar .logo {
+        font-size: 22px; /* Adjust logo size for smaller screens */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0; /* Reduce margin between links */
+    }
+
+    .navbar .btn-darkmode-btn {
+        margin-left: 0; /* Reset margin for buttons */
+    }
+    
+    .single-section h1 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .single-section h2 {
+        font-size: 24px; /* Adjust subheading size */
+    }
+
+    .single-section p {
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .footer {
+        flex-direction: column; /* Stack footer content */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px; /* Further adjust logo size */
+    }
+
+    .navbar .nav-links li {
+        margin: 5px 0; /* Further reduce margin between links */
+    }
+
+    .single-section h1 {
+        font-size: 24px; /* Further adjust heading size */
+    }
+
+    .single-section h2 {
+        font-size: 20px; /* Further adjust subheading size */
+    }
+
+    .single-section p {
+        font-size: 14px; /* Further adjust paragraph size */
+    }
+
+    .footer p {
+        font-size: 12px; /* Smaller footer text */
+    }
 }
