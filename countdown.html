@@ -8,42 +8,54 @@
     <link rel="icon" href="Images/WebpageIcon.ico" type="image/x-icon">
     <title>Countdown</title>
     <style>
-        body {
-          margin: 0;
-          padding: 0;
-          background-color: black; /* Set background to black */
-          font-family: Arial, sans-serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        font-family: Arial, sans-serif;
+      }
   
-        .countdown-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh; /* Full viewport height */
-          color: white;
-        }
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
   
-        #countdown-timer {
-          text-align: center;
-          background-color: #444; /* Dark gray background for the timer */
-          padding: 40px;
-          border-radius: 15px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-          color: white; /* Text color */
-          max-width: 400px;
-        }
+      #countdown-timer {
+        text-align: center;
+        background-color: #444;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        color: white;
+        max-width: 400px;
+        width: 90%;
+      }
   
-        h2 {
-          font-size: 36px;
-          margin-bottom: 20px;
-        }
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
   
-        #timer {
-          font-size: 48px; /* Increased font size */
-          font-weight: bold;
-          letter-spacing: 2px;
-        }
-      </style>
+      #timer {
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+  
+      /* Center and resize the iframe */
+      iframe {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+      }
+  </style>
+  
 </head>
 
 <body>
@@ -53,6 +65,8 @@
         <div id="countdown-timer">
             <h2>Countdown to Save Her:</h2>
             <p id="timer">Loading...</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pSNrCJ_ggXQ?si=39TEcnkPhE1qSVVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
