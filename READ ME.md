@@ -1,3 +1,12 @@
+//MONDAY 18TH NOVEMBER 2024//
+What's new in this update, 18th November 2024
+
+I have updated the mobile view of the website and will continue to keep creating a better looking version. I have also updated the Countdown page to reflect my new singles release date and have also added a PRESAVE button which takes you to my PRESAVE link. I willupdate this each time I change the countdown
+
+
+
+
+
 //TUESDAY 5TH NOVEMBER 2024//
 What's new in this update, 5th November 2024
 
