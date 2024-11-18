@@ -1,0 +1,370 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Default font */
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Default background color */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for background and text color */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
+}
+
+body.dark-mode .navbar {
+    background-color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    display: flex;
+    align-items: center; /* Center align links vertically */
+    list-style: none;
+    margin-right: auto; /* Adjust right margin if needed */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar .nav-links li {
+    margin: 0 20px; /* Space between links */
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transition for link color */
+    padding: 10px 0; /* Ensure padding for better click area */
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+.navbar .nav-links a:hover {
+    color: #512da8;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+.left-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff; /* Menu background color */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    opacity: 0; /* Start as invisible */
+    visibility: hidden; /* Ensure it's not visible */
+    transition: left 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+    z-index: 999; /* Ensure it's above other content */
+    padding: 20px; /* Add padding to the left menu */
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+}
+
+/* Dark Mode for Left Menu */
+body.dark-mode .left-menu {
+    background-color: #121212; /* Dark background for menu */
+    color: #e2e2e2; /* Light text for contrast */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7); /* Darker shadow in dark mode */
+}
+
+/* When the menu is open */
+.left-menu.open {
+    left: 0; /* Slide in */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+    display: flex; /* Use flex to align items */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Menu Item Styles */
+.left-menu .menu-item {
+    background-color: #7a1e9d; /* Lighter purple background */
+    color: white; /* White text for better contrast */
+    padding: 12px 15px; /* Increased padding for better touch target */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for item hover */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded edges */
+    margin: 10px 0; /* Vertical spacing between buttons */
+    width: auto; /* Adjust width to content */
+    max-width: 90%; /* Limit max width of buttons */
+    display: block; /* Ensure block-level display */
+    font-weight: bold; /* Make text bold for better visibility */
+    font-size: 1rem; /* Use rem for scaling */
+}
+
+/* Hover effect for menu items */
+.left-menu .menu-item:hover {
+    background-color: #512da8; /* Darker purple on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Active state for selected menu item */
+.left-menu .menu-item.active {
+    background-color: #512da8; /* Highlight active item */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #512da8;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: color 0.5s ease;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    transition: color 0.5s ease;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.feature i {
+    font-size: 48px;
+    color: #512da8;
+    margin-bottom: 20px;
+    transition: color 0.5s ease;
+}
+
+.feature h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+    flex-grow: 1;
+    transition: color 0.5s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+.footer {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .social-icons .icon {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer .social-icons .icon:hover {
+    color: #e2e2e2;
+}
+
+/* Buttons */
+.btn {
+    background-color: #512da8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5c6bc0;
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #121212;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .hero {
+    background: #121212;
+}
+
+body.dark-mode .hero h1 {
+    color: #bb86fc;
+}
+
+body.dark-mode .hero p {
+    color: #e2e2e2;
+}
+
+body.dark-mode .features {
+    background-color: #121212;
+}
+
+body.dark-mode .feature {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .feature i {
+    color: #bb86fc;
+}
+
+body.dark-mode .feature h3 {
+    color: #e2e2e2;
+}
+
+body.dark-mode .feature p {
+    color: #b3b3b3;
+}
+
+body.dark-mode .footer {
+    background-color: #8558bb;
+    color: #e2e2e2;
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .btn {
+    background-color: #bb86fc;
+    color: #2a2a2a;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #9c63e6;
+}

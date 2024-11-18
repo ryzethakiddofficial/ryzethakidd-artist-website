@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="Images/WebpageIcon.ico" type="image/x-icon">
+    <title>Blog | Ryze Tha Kidd</title>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <div class="left-menu" id="leftMenu">
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='index.html'">Home</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='about.html'">About</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='rtk+.html'">RTK+</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='discography.html'">Discography</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='contact.html'">Contact</div>
+                    <div class="menu-item" onclick="closeMenu(); window.location.href='Blog.html'">Blog</div>
+                </div>
+                <a href="index.html" class="logo">Ryze Tha Kidd</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rtk+.html">RTK+</a></li>
+                        <li><a href="discography.html">Discography</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li>
+                            <button class="btn btn-darkmode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                        <li>
+                            <button class="menu-toggle" id="menuToggle">☰</button> <!-- Menu Toggle Button -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Blog Section -->
+        <section class="blog">
+            <div class="container">
+                <h1 class="blog-title">Ryze Tha Kidd Blog</h1>
+                
+                <div class="blog-entries">
+                    <article class="blog-post">
+                        <h2 class="blog-post-title">Blog Page Created</h2>
+                        <p class="blog-post-date">October 23, 2024</p>
+                        <p class="blog-post-content">The official blog page has been created. I will be updating this blog as frequent as needed and will be providing links to my music, Music Videos, Presave links, personal information and just general updates about me and my career. I hope to turn my music career into a full-time job and also I would really like to eventually update this whole blog page and make it look better and link off to different things. Theres a lot of stuff going on in my life, so I am taking it slow with the updates of this website. I'm going to be doing small updates to optimise, but for now the major updates will be slower. I'll keep you updated on this blog page with any new information. Thank you for all your love and support, I hope I give back what you expect. Have a great day and I'll see you soon.</p>
+                        <p class="blog-post-date">Author: Ryan Duncuft</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ryze Tha Kidd. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ryzethakidd" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/ryzethakidd" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ryzethakidd" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/menu.js"></script>
+    <script src="Scripts/idle.js"></script>
+    <script src="Scripts/darkmode.js"></script>
+</html>
