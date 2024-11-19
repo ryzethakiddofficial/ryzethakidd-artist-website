@@ -1,0 +1,89 @@
+@import url(homestyle.css);
+
+/* Blog Post Styles */
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    text-align: center; /* Center text within the post */
+}
+
+body.dark-mode .blog-post {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.blog-post-title {
+    font-size: 1.75rem; /* Use rem for scaling */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .blog-post-title {
+    color: #e2e2e2;
+}
+
+.blog-post-date {
+    font-size: 1.125rem; /* Use rem for scaling */
+    color: #777;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .blog-post-date {
+    color: #bbb;
+}
+
+.blog-post-content {
+    font-size: 1.25rem; /* Use rem for scaling */
+    color: #555;
+    text-align: center; /* Center content text */
+}
+
+body.dark-mode .blog-post-content {
+    color: #ddd;
+}
+
+.blog .container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
+
+.blog-title {
+    font-size: 2.25rem; /* Use rem for scaling */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #512da8;
+}
+
+body.dark-mode .blog-title {
+    color: #bb86fc;
+}
+
+.blog-entries {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Add Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 15px; /* Smaller padding */
+    }
+
+    .blog-title, .blog-post-title {
+        font-size: 1.5rem; /* Adjust for smaller screens */
+    }
+
+    .blog-post-content, .blog-post-date {
+        font-size: 1rem; /* Adjust font size */
+    }
+}

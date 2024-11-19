@@ -1,0 +1,124 @@
+@import url(homestyle.css);
+
+/* Discography Navigation */
+.discography-nav {
+    display: flex; /* Flex layout for navigation */
+    justify-content: center; /* Center nav buttons */
+    margin-bottom: 40px; /* Margin below nav */
+}
+
+.nav-btn {
+    background: #512da8; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for button */
+    margin: 0 10px; /* Margin between buttons */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+    background-color: #3d1d6d; /* Button active/hover color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Discography Section */
+.discography {
+    padding: 60px 20px; /* Vertical padding for discography */
+    background-color: #ffffff; /* Discography background color */
+}
+
+.discography .container {
+    max-width: 1200px; /* Max width for container */
+    margin: auto; /* Center the container */
+}
+
+/* Release Sections */
+.release-section {
+    display: none; /* Initially hide all sections */
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease; /* Transition for fade effect */
+}
+
+.release-section.active {
+    display: block; /* Show the active section */
+    opacity: 1; /* Set opacity to 1 when active */
+}
+
+.release-item {
+    display: flex; /* Flex layout for release items */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 30px; /* Margin below release items */
+    padding: 15px; /* Padding inside release items */
+    background: #f9f9f9; /* Default background for release items */
+    border-radius: 10px; /* Rounded corners for release items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for release items */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+    position: relative; /* Positioning context */
+    overflow: hidden; /* Ensure image and content stay within bounds */
+}
+
+.release-item a {
+    display: flex; /* Flex layout for links */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensure text color is inherited from parent */
+    width: 100%; /* Full width for link */
+    height: 100%; /* Full height for link */
+}
+
+.release-item:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.release-item img {
+    width: 150px; /* Fixed width for images */
+    height: auto; /* Automatic height to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-right: 20px; /* Space to the right of the image */
+    transition: transform 0.3s; /* Transition for image hover effect */
+}
+
+.release-item:hover img {
+    transform: scale(1.05); /* Enlarge image on hover */
+}
+
+.release-info {
+    max-width: 800px; /* Max width for release info */
+}
+
+.release-info h3 {
+    font-size: 26px; /* Heading font size */
+    color: #333; /* Heading color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.release-info .release-date {
+    font-size: 16px; /* Release date font size */
+    color: #777; /* Release date color */
+    margin-bottom: 10px; /* Space below release date */
+}
+
+.release-info p {
+    font-size: 16px; /* Paragraph font size */
+    color: #666; /* Paragraph color */
+}
+
+body.dark-mode .discography {
+    background-color: #121212; /* Dark mode discography background */
+}
+
+body.dark-mode .release-item {
+    background: #1d1d1d; /* Dark mode release item background */
+    border-radius: 10px; /* Rounded corners for dark mode release items */
+}
+
+body.dark-mode .release-info h3,
+body.dark-mode .release-info .release-date,
+body.dark-mode .release-info p {
+    color: #ffffff; /* Dark mode text color for release info */
+}
