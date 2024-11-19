@@ -1,3 +1,14 @@
+//TUESDAY 19TH NOVEMBER 2024//
+What's new in this update, 19th November 2024
+
+In this update, I have redesigned the website to give it a more modern feeling and make it more dynamic and responsive. I have redesigned the welcome screen to give it more of a lively feel. You can also now visit the RTK+ tab to see new music and it's sorted into music and videos.
+
+This update, hopes to ring life to the website and increase user experience.
+
+
+
+
+
 //MONDAY 18TH NOVEMBER 2024//
 What's new in this update, 18th November 2024
 
