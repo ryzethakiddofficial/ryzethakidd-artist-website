@@ -464,3 +464,14 @@ body.dark-mode .feature .btn:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Additional scaling for very small screens */
+@media (max-width: 480px) {
+    .navbar {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
+
+    .album-section {
+        transform: scale(0.9); /* Further reduce size for very small screens */
+    }
+}
