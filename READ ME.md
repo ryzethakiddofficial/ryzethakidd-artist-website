@@ -1,3 +1,13 @@
+//FIRDAY 22ND NOVEMBER 2024
+What's new in this update, 22nd November 2024
+
+In this update, I have cleaned up the HTML, CSS & JS. I have reworked the scripts so they all run smoother, in turn making the website run faster.
+If you now go to the RTK+ tab, you will see a big banner at the top of the page warning you the page will become inoperable soon; this is because I am working on an applicationfor this streaming service and it will only be available through that app until I can find a better way to go around the web version, which only then will I add the RTK+ tab back. For now, the page will still be as normal and you can still purchase my music, but when I release the app, it will turn into a download page.
+
+
+
+
+
 //TUESDAY 19TH NOVEMBER 2024//
 What's new in this update, 19th November 2024
 
