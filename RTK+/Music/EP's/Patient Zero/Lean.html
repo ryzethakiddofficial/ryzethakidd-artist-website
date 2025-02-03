@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../../../Styles/singlestyle.css">
+    <link rel="icon" href="../../../../Images/WebpageIcon.ico" type="Images/x-icon">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>Lean (freestyle) | Ryze Tha Kidd</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AW5Xfz8RjKMcmI9oPoc7eApY-s17qwnPwMXWjkg98RxvTNKYpNPlAEaRZh8DKPaF5TDdJ72i-06Eguz-&currency=GBP"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <a href="../../../../index.html" class="logo">Ryze Tha Kidd</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../../../../index.html">Home</a></li>
+                        <li><a href="../../../../about.html">About</a></li>
+                        <li><a href="../../../../rtk+.html">RTK+</a></li>
+                        <li><a href="../../../../discography.html">Discography</a></li>
+                        <li><a href="../../../../contact.html">Contact</a></li>
+                        <li><a href="../../../../blog.html">Blog</a></li>
+                        <li>
+                            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Back Button -->
+    <a href="../patient-zero.html" class="btn primary-btn" id="back-to-discography">
+        <i class="fa-solid fa-arrow-left"></i> Back to Patient Zero
+    </a>
+
+            <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Table of Contents Section (Aligned Right) -->
+            <aside class="toc-section">
+                <div class="single-picture">
+                    <img src="../../../../Images/Discography/patient-zero.jpg" alt="Patient Zero Cover">
+                </div>
+
+                <div class="single-info">
+                    <a href="https://distrokid.com/hyperfollow/ryzethakidd1/patient-zero-3" class="btn primary-btn" target="_blank">Listen Now</a>
+                    
+                    <h2>Lean (freestyle)</h2>
+                    <p><strong>Release Date:</strong> 24th May 2024</p>
+                    <p><strong>Genre:</strong> Trap</p>
+                    <p><strong>Duration:</strong> 1.30</p>
+                    <p><strong>Writer:</strong> Ryan Duncuft</p>
+                    <p><strong>Producer:</strong> Darkside</p>
+                </div>
+            </aside>
+
+            <!-- Single Section -->
+            <section class="single-section">
+                <h1>Purchase Lean (freestyle)</h1>
+                <!-- PayPal Button Container -->
+                <div id="paypal-button-container"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ryze Tha Kidd. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ryzethakidd" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/ryzethakidd" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ryzethakidd" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../Scripts/menu.js"></script>
+    <script src="../../../../Scripts/idle.js"></script>
+    <script src="../../../../Scripts/darkmode.js"></script>
+    <script>
+        // PayPal Button Rendering
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '01.29' // Set your product price here
+                        },
+                        description: 'Buy Healing Wounds Album' // Set your product description here
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given);
+                    // After the transaction, provide download links
+                    downloadFiles();
+                });
+            },
+            onError: function(err) {
+                console.error('Error during transaction', err);
+                alert('There was an error processing your payment. Please try again.');
+            }
+        }).render('#paypal-button-container'); // Render the PayPal button into the container
+
+        // Function to trigger downloads
+        function downloadFiles() {
+            const files = [
+                'https://github.com/ryzethakiddofficial/RTK-Plus/raw/refs/heads/main/Ryze%20Tha%20Kidd%20-%20Lean.mp3'
+            ];
+
+            // Create a download link for each file
+            files.forEach(file => {
+                const a = document.createElement('a');
+                a.href = file;
+                a.download = ''; // Use file name if you want to specify
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+    </script>
+</body>
+
+</html>
