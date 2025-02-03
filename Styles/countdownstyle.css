@@ -1,0 +1,115 @@
+@import url(homestyle.css);
+
+.countdown-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(135deg, #2c003e, #1a002b);
+	overflow: hidden;
+	animation: bgShift 8s infinite alternate
+}
+
+#countdown-timer {
+	text-align: center;
+	background: rgb(0 0 0 / .8);
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgb(0 0 0 / .7);
+	color: #fff;
+	max-width: 400px;
+	width: 90%;
+	backdrop-filter: blur(10px);
+	animation: pulse 2s infinite
+}
+
+#timer {
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	color: #bb86fc;
+	text-shadow: 0 2px 5px rgb(0 0 0 / .7);
+	animation: glowText 1.5s infinite alternate
+}
+
+#countdown-timer img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	margin: 20px 0;
+	box-shadow: 0 4px 15px rgb(0 0 0 / .6);
+	transform: scale(1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+#countdown-timer img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 8px 20px rgb(0 0 0 / .8)
+}
+
+.btn-presave {
+	padding: 10px 20px;
+	background: linear-gradient(135deg, #6200ee, #3700b3);
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	text-shadow: 0 2px 5px rgb(0 0 0 / .4);
+	box-shadow: 0 4px 10px rgb(0 0 0 / .5);
+	transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+	animation: btnGlow 3s infinite alternate
+}
+
+.btn-presave:hover {
+	background: linear-gradient(135deg, #3700b3, #6200ee);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 15px rgb(0 0 0 / .7)
+}
+
+@keyframes bgShift {
+	0% {
+		background: linear-gradient(135deg, #2c003e, #1a002b)
+	}
+
+	100% {
+		background: linear-gradient(135deg, #1a002b, #2c003e)
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1)
+	}
+
+	50% {
+		transform: scale(1.02)
+	}
+
+	100% {
+		transform: scale(1)
+	}
+}
+
+@keyframes glowText {
+	0% {
+		text-shadow: 0 0 10px #bb86fc, 0 0 20px #6200ee
+	}
+
+	100% {
+		text-shadow: 0 0 20px #bb86fc, 0 0 30px #6200ee
+	}
+}
+
+@keyframes btnGlow {
+	0% {
+		box-shadow: 0 4px 10px rgb(98 0 238 / .5)
+	}
+
+	100% {
+		box-shadow: 0 8px 20px rgb(98 0 238 / .8)
+	}
+}
