@@ -1,0 +1,159 @@
+@import url(homestyle.css);
+
+.main-content .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	max-width: 1200px;
+	margin: auto;
+	padding: 20px;
+	padding-top: 60px
+}
+
+.album-section {
+	text-align: center;
+	background: linear-gradient(to right, rgb(226 226 226 / .6), rgb(201 214 255 / .8));
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgb(0 0 0 / .1);
+	width: 100%;
+	max-width: 800px;
+	transform: scale(1)
+}
+
+body.dark-mode .album-section {
+	background: #000;
+	box-shadow: 0 4px 12px rgb(255 255 255 / .1)
+}
+
+.primary-btn {
+	display: inline-flex;
+	align-items: center;
+	background-color: #6e43ff;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background-color 0.3s, transform 0.3s;
+	margin-top: 20px
+}
+
+.primary-btn i {
+	margin-right: 8px
+}
+
+.primary-btn:hover {
+	background-color: #5c6bc0;
+	transform: translateY(-2px)
+}
+
+body.dark-mode .primary-btn {
+	color: #fff
+}
+
+.album-cover img {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgb(0 0 0 / .1)
+}
+
+body.dark-mode .album-cover img {
+	box-shadow: 0 4px 8px rgb(255 255 255 / .1)
+}
+
+.tracklist-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	gap: 20px
+}
+
+.tracklist-buttons .track-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 280px
+}
+
+.track-group .track-button {
+	display: block;
+	background-color: #6e43ff;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	margin-bottom: 8px;
+	transition: background-color 0.3s, transform 0.3s;
+	text-align: center
+}
+
+.track-group .track-button:hover {
+	background-color: #5c6bc0;
+	transform: translateY(-2px)
+}
+
+body.dark-mode .track-group .track-button {
+	background-color: #6e43ff;
+	color: #fff
+}
+
+body.dark-mode .track-group .track-button:hover {
+	background-color: #5c6bc0
+}
+
+.credits h2 {
+	font-size: 28px;
+	color: #222;
+	margin-bottom: 15px
+}
+
+body.dark-mode .credits h2 {
+	color: #fff
+}
+
+.credits p {
+	font-size: 16px;
+	color: #666
+}
+
+body.dark-mode .credits p {
+	color: #bbb
+}
+
+@media (max-width:768px) {
+	.album-section {
+		padding: 15px;
+		transform: scale(.95)
+	}
+
+	.tracklist-buttons {
+		flex-direction: row;
+		justify-content: center;
+		gap: 20px
+	}
+
+	.track-group {
+		width: 100%
+	}
+
+	.buttons-section {
+		flex-direction: row;
+		justify-content: center
+	}
+}
+
+@media (max-width:480px) {
+	.navbar {
+		transform: scale(.9)
+	}
+
+	.album-section {
+		transform: scale(.9)
+	}
+}
