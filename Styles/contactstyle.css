@@ -1,0 +1,126 @@
+@import url(homestyle.css);
+
+.form-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 80px);
+	padding: 20px
+}
+
+.contact-container {
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 5px 25px rgb(0 0 0 / .1);
+	width: 100%;
+	max-width: 650px;
+	padding: 40px;
+	text-align: center;
+	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease
+}
+
+.contact-container.dark-mode {
+	background: #000;
+	color: #e0e0e0;
+	box-shadow: 0 5px 25px rgb(0 0 0 / .3)
+}
+
+.contact-container h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: #512da8
+}
+
+.contact-container p {
+	font-size: 18px;
+	margin-bottom: 35px;
+	line-height: 1.5
+}
+
+.contact-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center
+}
+
+.contact-container input,
+.contact-container textarea {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 16px;
+	font-size: 15px;
+	border-radius: 10px;
+	width: 80%;
+	outline: none;
+	transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+	border-color: #512da8
+}
+
+.contact-container input.dark-mode,
+.contact-container textarea.dark-mode {
+	background-color: #444;
+	color: #e0e0e0;
+	border-color: #555
+}
+
+.contact-container button {
+	background-color: #512da8;
+	color: #fff;
+	font-size: 16px;
+	padding: 14px 24px;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease
+}
+
+.contact-container button:hover {
+	background-color: #5c6bc0;
+	transform: translateY(-2px)
+}
+
+.contact-container button.dark-mode {
+	background-color: #673ab7
+}
+
+@media (max-width:768px) {
+	.contact-container {
+		padding: 30px;
+		width: 90%
+	}
+
+	.contact-container input,
+	.contact-container textarea {
+		width: 100%
+	}
+
+	.contact-container h2 {
+		font-size: 1.7rem
+	}
+
+	.contact-container p {
+		font-size: 16px
+	}
+}
+
+@media (max-width:480px) {
+	.contact-container h2 {
+		font-size: 1.5rem
+	}
+
+	.contact-container p {
+		font-size: 14px
+	}
+
+	.contact-container button {
+		font-size: 15px;
+		padding: 12px 20px
+	}
+}
