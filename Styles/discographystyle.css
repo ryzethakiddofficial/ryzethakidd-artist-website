@@ -122,24 +122,31 @@ body.dark-mode .release-info p {
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .release-item {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px; /* Add padding to make the content less cramped */
+    align-items: center; /* Center-align content */
+    padding: 20px; /* Add padding to reduce crowding */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
   }
 
   .release-item img {
-    margin-right: 0;
-    margin-bottom: 15px;
     width: 100%;
-    max-width: 200px;
+    max-width: 220px; /* Adjust for better image scaling */
+    margin-bottom: 15px; /* Add margin for spacing between image and text */
+  }
+
+  .release-info {
+    text-align: center; /* Center the text for better readability */
   }
 
   .release-info h3 {
     font-size: 22px;
+    margin-bottom: 10px; /* Add spacing between title and description */
   }
 
   .release-info p {
     font-size: 14px;
+    margin-bottom: 10px; /* Add spacing between text */
   }
 
   .release-info .release-date {
@@ -147,21 +154,31 @@ body.dark-mode .release-info p {
   }
 
   .discography-nav {
-    flex-direction: row; /* Keep buttons in a horizontal row */
+    display: flex;
+    flex-direction: row; /* Keep buttons in a row */
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 20px; /* Add margin to create space between navigation and content */
   }
 
   .nav-btn {
     padding: 10px 20px;
     font-size: 14px;
     margin: 5px;
+    background-color: #333; /* Darken the background for better visibility */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-btn.active {
+    background-color: #007bff; /* Highlight the active button */
   }
 }
 
 @media (max-width: 768px) {
   .release-item img {
-    width: 120px;
+    width: 150px; /* Adjust image size to be more suitable for medium screens */
     max-width: 100%;
   }
 
@@ -178,21 +195,21 @@ body.dark-mode .release-info p {
   }
 
   .discography-nav {
-    flex-direction: row; /* Keep buttons in a horizontal row */
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
 
   .nav-btn {
-    padding: 10px 20px;
-    font-size: 14px;
+    padding: 8px 15px; /* Slightly smaller buttons for medium screens */
+    font-size: 13px;
     margin: 5px;
   }
 }
 
 @media (max-width: 480px) {
   .nav-btn {
-    padding: 10px 15px;
+    padding: 8px 12px;
     font-size: 12px;
   }
 
@@ -210,15 +227,15 @@ body.dark-mode .release-info p {
 
   .release-item img {
     width: 100%;
-    max-width: 160px; /* More mobile-friendly image size */
+    max-width: 160px; /* Optimized for small screens */
   }
 
   .discography {
-    padding: 20px 15px; /* Reduce padding for better use of space */
+    padding: 20px 10px; /* Reduce padding to make space more efficient */
   }
 
   .discography-nav {
-    flex-direction: row; /* Keep buttons in a horizontal row */
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }

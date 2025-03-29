@@ -539,13 +539,13 @@ body.dark-mode .feature:hover {
     }
 
     .navbar .nav-links a {
-        font-size: 24px;
-        padding: 20px;
+        font-size: 18px;
+        padding: 15px 25px;
         color: #fff;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
@@ -576,7 +576,7 @@ body.dark-mode .feature:hover {
 	}
 
 	.hero h1 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.hero p {
@@ -592,8 +592,8 @@ body.dark-mode .feature:hover {
 	.feature {
 		width: 100%;
 		margin: 10px auto;
-		padding: 15px;
-		transform: scale(.95);
+		padding: 20px;
+		transform: scale(1);
 	}
 
 	.feature h3 {
@@ -609,8 +609,14 @@ body.dark-mode .feature:hover {
 	}
 
 	.video-container {
-		width: 60%;
-	}
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -630,7 +636,12 @@ body.dark-mode .feature:hover {
 
 	.footer p {
 		font-size: 12px;
+        padding: 10px;
 	}
+
+	.social-icons a {
+        margin: 10px; /* Space out the social icons */
+    }
 
 	.navbar .btn-toggle {
 		font-size: 18px;
