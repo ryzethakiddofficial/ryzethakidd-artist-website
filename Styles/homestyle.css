@@ -49,7 +49,7 @@
 }
 
 #notice-popup .popup-content {
-	background: #6e43ff;
+	background: linear-gradient(to right, #E2E2E2 , #C9D6FF);
 	padding: 20px;
 	border-radius: 8px;
 	text-align: center;
@@ -57,10 +57,23 @@
 	width: 100%
 }
 
+body.dark-mode #notice-popup .popup-content {
+	background: linear-gradient(to right, #1e1e1e, #3a3a3a);
+	color: #e0e0e0;
+}
+
+body.dark-mode #notice-popup .popup-content a {
+	color: #6e43ff;  /* Set a bright, contrasting color for links in dark mode */
+}
+
+body.dark-mode #notice-popup .popup-content a:hover {
+	color: #a1a1ff; /* Slightly lighter shade for hover effect */
+}
+
 #notice-popup button {
 	margin-top: 20px;
 	padding: 10px;
-	background: #1e1e1e;
+	background: #6e43ff;
 	border: none;
 	color: #fff;
 	font-size: 16px;
