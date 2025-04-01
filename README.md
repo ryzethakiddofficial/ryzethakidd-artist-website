@@ -1,7 +1,16 @@
+//SATURDAY 29TH MARCH 2025
+Patch Notes - Release 2.0.1
+
+Saturday 29th March 2025
+
+Overview
+
+In this small update, we have enhanced the mobile versions of the website and have the also fixed a few bugs we noticed!
+
 //MONDAY 3RD FEBRUARY 2025
 Patch Notes - Release 2.0.0
 
-Saturday, 1st February 2025
+Monday, 3rd February 2025
 
 Overview
 
